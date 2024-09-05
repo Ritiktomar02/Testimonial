@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import Testimonial from './component/Testimonial';
 import { FaAngleLeft } from "react-icons/fa6";
-import { FaAngleRight } from "react-icons/fa";
+import { FaChevronRight } from "react-icons/fa";
 import { increament, decreament, Surprise } from "./redux/slices/Profileslice";
 
 const App = () => {
@@ -24,7 +24,7 @@ const App = () => {
           <Testimonial state={state[index]} />
           <div className="flex justify-center mt-[50px] gap-x-6">
             <FaAngleLeft size="30px" color="violet" onClick={() => dispatch(decreament())} />
-            <FaAngleRight size="30px" color="violet" onClick={() => dispatch(increament())} />
+            <FaChevronRight size="26px" color="violet" onClick={() => dispatch(increament())} />
           </div>
           <div className="flex justify-center mx-[200px] bg-violet-400 mt-4 py-2 rounded-lg text-white font-bold hover:bg-violet-500" onClick={() => dispatch(Surprise())} >Surprise Me</div>
         </div>
